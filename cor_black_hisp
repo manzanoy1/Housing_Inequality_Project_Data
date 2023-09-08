@@ -1,0 +1,32 @@
+#behind the scenes libraries
+library(tidyverse)
+
+#read the county data
+cty <- read_csv("county.csv")
+
+view(cty)
+
+#question 2
+
+black_females <- cor(cty$frac_coll_plus, cty$kfr_black_female_p25, use = "complete")
+black_males <- cor(cty$frac_coll_plus, cty$kfr_black_male_p25, use = "complete")
+hispanic_females <- cor(cty$frac_coll_plus, cty$kfr_hisp_female_p25, use = "complete")
+hispanic_males <- cor(cty$frac_coll_plus, cty$kfr_hisp_male_p25, use = "complete")
+white_females <- cor(cty$frac_coll_plus, cty$kfr_white_female_p25, use = "complete")
+white_males <- cor(cty$frac_coll_plus, cty$kfr_white_male_p25, use = "complete")
+
+black_females
+black_males
+hispanic_females
+hispanic_males
+white_females
+white_males
+
+"""My findings about the correlation between blacks, hispanics and whites were these numbers: 
+> black_females [1] 0.3331051
+> black_males [1] 0.1564387
+> hispanic_females [1] 0.1723616
+> hispanic_males [1] 0.03114569
+> white_females [1] 0.1992209
+> white_males [1] 0.1344638
+It really seems that black females have more mobility from the lower income families than the rest of the six demographic groups."""
