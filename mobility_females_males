@@ -1,0 +1,30 @@
+#behind the scenes libraries
+library(tidyverse)
+
+#read the county data
+cty <- read_csv("county.csv")
+
+view(cty)
+
+#step 1
+mobility <- c(cty$kfr_pooled_pooled_p25)
+mobility_iqr <- IQR(mobility, na.rm = TRUE)
+mobility_iqr
+
+#step 2
+mobility_females <- c(cty$kfr_pooled_female_p25)
+mobility_males <- c(cty$kfr_pooled_male_p25)
+
+mobility_females_iqr <- IQR(mobility_females, na.rm = TRUE)
+mobility_males_iqr <- IQR(mobility_males, na.rm = TRUE)
+
+mobility_females_iqr
+mobility_males_iqr
+
+"""Results: 
+> mobility_females_iqr
+[1] 0.07504222
+> mobility_males_iqr
+[1] 0.08083003
+It seems that males have a greater variability in socioeconomic mobility than females.
+More or less variability in this context means a scatter of rankings among lower-income individuals."""
