@@ -1,0 +1,27 @@
+#behind the scenes libraries
+library(tidyverse)
+
+#read the county data
+cty <- read_csv("county.csv")
+
+view(cty)
+
+#question 1
+#step 1
+mean_black_female <- mean(cty$kfr_black_female_p25, na.rm = TRUE)
+mean_black_male <- mean(cty$kfr_black_male_p25, na.rm = TRUE)
+mean_white_female <- mean(cty$kfr_white_female_p25, na.rm = TRUE)
+mean_white_male <- mean(cty$kfr_white_male_p25, na.rm = TRUE)
+avg_mobility_mean <- c(mean_black_female, mean_black_male, mean_white_female, mean_white_male)
+avg_mobility_mean
+
+median_black_female <- median(cty$kfr_black_female_p25, na.rm = TRUE)
+median_black_male <- median(cty$kfr_black_male_p25, na.rm = TRUE)
+median_white_female <- median(cty$kfr_white_female_p25, na.rm = TRUE)
+median_white_male <- median(cty$kfr_white_male_p25, na.rm = TRUE)
+
+avg_mobility_median <- c(median_black_female, median_black_male, median_white_female, median_white_male)
+avg_mobility_median
+
+"""The mean for black females and males and white females and males are [1] 0.3468758 0.3187172 0.4704388 0.4533162
+As for the median for black females and males and white females and males on 25th percentile are [1] 0.3390925 0.3117345 0.4587600 0.4428373"""
