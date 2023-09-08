@@ -6,8 +6,6 @@ cty <- read_csv("county.csv")
 
 view(cty)
 
-#question 2
-
 black_females <- cor(cty$frac_coll_plus, cty$kfr_black_female_p25, use = "complete")
 black_males <- cor(cty$frac_coll_plus, cty$kfr_black_male_p25, use = "complete")
 hispanic_females <- cor(cty$frac_coll_plus, cty$kfr_hisp_female_p25, use = "complete")
