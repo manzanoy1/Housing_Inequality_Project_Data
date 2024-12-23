@@ -8,7 +8,7 @@ cty <- read_csv("county.csv")
 
 view(cty)
 
-#step 1
+#step 1: Values
 mean_black_female <- mean(cty$kfr_black_female_p25, na.rm = TRUE)
 mean_black_male <- mean(cty$kfr_black_male_p25, na.rm = TRUE)
 mean_white_female <- mean(cty$kfr_white_female_p25, na.rm = TRUE)
