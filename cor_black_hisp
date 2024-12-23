@@ -1,7 +1,7 @@
 #behind the scenes libraries
 library(tidyverse)
 
-#read the county data
+#read the county data from the csv file
 cty <- read_csv("county.csv")
 
 view(cty)
